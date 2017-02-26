@@ -42,8 +42,6 @@ public class GoogleApiService {
     }
 
     private static LatLongRequest getFromGoogle(LatLng latLong){
-        System.out.println("API KEY: " + API_KEY);
-
         GeocodingApiRequest request = GeocodingApi.reverseGeocode(G_CONTEXT, latLong);
         request.locationType(LocationType.ROOFTOP);
         GeocodingResult[] results = new GeocodingResult[1];
